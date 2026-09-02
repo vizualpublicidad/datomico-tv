@@ -27,3 +27,5 @@ Vercel mostrará los DNS exactos que debes configurar donde compraste el dominio
 
 ## Siguiente fase sugerida
 Crear `/expedientes/` con fichas de Shanay‑Timpishka, Byford Dolphin, Pata de Elefante y Goiânia, incluyendo fuentes y notas sobre recreaciones visuales.
+
+V2 deployment initialized.
