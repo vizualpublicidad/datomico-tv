@@ -1,21 +1,36 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
+
 <head>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- =====================================================
+       CONFIGURACIÓN BÁSICA
+  ====================================================== -->
 
-  <!-- GOOGLE ANALYTICS 4 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- =====================================================
+       GOOGLE ANALYTICS 4
+  ====================================================== -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RXF2WEG4E"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-4RXF2WEG4E');
   </script>
-  
-  
-  <!-- SCHEMA -->
+
+  <!-- =====================================================
+       STRUCTURED DATA / SCHEMA.ORG
+  ====================================================== -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,11 +68,8 @@
   }
   </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <!-- =====================================================
-       SEO BÁSICO
+       SEO
   ====================================================== -->
 
   <title>DATÓMICO | Ciencia, historia, ingeniería y naturaleza</title>
@@ -67,11 +79,6 @@
     content="Historias reales que parecen imposibles, explicadas por la ciencia. DATÓMICO explora fenómenos extremos, ingeniería, historia y naturaleza."
   />
 
-  <meta
-    name="keywords"
-    content="DATÓMICO, ciencia, divulgación científica, historia, ingeniería, naturaleza, fenómenos extremos, accidentes científicos, misterios del planeta"
-  />
-
   <meta name="author" content="DATÓMICO" />
 
   <meta
@@ -79,12 +86,16 @@
     content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   />
 
-  <!-- URL OFICIAL -->
-  <link rel="canonical" href="https://datomicotv.com/" />
+  <!-- URL CANÓNICA -->
+
+  <link
+    rel="canonical"
+    href="https://datomicotv.com/"
+  />
 
   <!-- =====================================================
        OPEN GRAPH
-       Facebook, WhatsApp, Messenger, LinkedIn, etc.
+       Facebook / WhatsApp / Messenger / LinkedIn
   ====================================================== -->
 
   <meta property="og:type" content="website" />
@@ -102,29 +113,44 @@
     content="Ciencia, historia, ingeniería y naturaleza. Historias reales explicadas por la ciencia."
   />
 
- <meta
-  property="og:image"
-  content="https://datomicotv.com/assets/og-datomico.jpg"
-/>
+  <meta
+    property="og:image"
+    content="https://datomicotv.com/assets/og-datomico.jpg"
+  />
 
-<meta
-  property="og:image:secure_url"
-  content="https://datomicotv.com/assets/og-datomico.jpg"
-/>
+  <meta
+    property="og:image:secure_url"
+    content="https://datomicotv.com/assets/og-datomico.jpg"
+  />
 
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <meta
+    property="og:image:type"
+    content="image/jpeg"
+  />
 
-<meta
-  property="og:image:alt"
-  content="DATÓMICO — Historias reales que parecen imposibles, explicadas por la ciencia."
-/>
+  <meta
+    property="og:image:width"
+    content="1200"
+  />
+
+  <meta
+    property="og:image:height"
+    content="630"
+  />
+
+  <meta
+    property="og:image:alt"
+    content="DATÓMICO — Historias reales que parecen imposibles, explicadas por la ciencia."
+  />
 
   <!-- =====================================================
        X / TWITTER
   ====================================================== -->
 
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
 
   <meta
     name="twitter:title"
@@ -150,39 +176,84 @@
        APARIENCIA / NAVEGADOR
   ====================================================== -->
 
-  <meta name="theme-color" content="#080808" />
+  <meta
+    name="theme-color"
+    content="#080808"
+  />
 
-  <link rel="icon" href="assets/datomico-logo.png" />
+  <link
+    rel="icon"
+    href="assets/datomico-logo.png"
+  />
 
-  <!-- Ayuda a cargar antes la imagen principal -->
+  <!-- Preload del hero principal -->
+
   <link
     rel="preload"
     as="image"
     href="assets/hero-datomico-v4.jpg"
   />
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  />
+
 </head>
 
 <body>
 
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="DATÓMICO inicio">
-      <img src="assets/datomico-logo.png" alt="Logo DATÓMICO" />
-      <span>DATÓMICO</span>
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header
+    class="site-header"
+    id="top"
+  >
+
+    <a
+      class="brand"
+      href="#top"
+      aria-label="DATÓMICO inicio"
+    >
+
+      <img
+        src="assets/datomico-logo.png"
+        alt="Logo DATÓMICO"
+      />
+
+      <span>
+        DATÓMICO
+      </span>
+
     </a>
 
     <nav aria-label="Principal">
-      <a href="#series">Series</a>
-      <a href="#historias">Historias</a>
-      <a href="#colaboraciones">Colaboraciones</a>
+
+      <a href="#series">
+        Series
+      </a>
+
+      <a href="#historias">
+        Historias
+      </a>
+
+      <a href="#colaboraciones">
+        Colaboraciones
+      </a>
+
       <a
         class="nav-cta"
         href="mailto:contacto@datomicotv.com"
       >
         Contacto
       </a>
+
     </nav>
+
   </header>
 
   <main>
@@ -193,7 +264,11 @@
 
     <section class="hero">
 
-      <div class="hero-media" aria-hidden="true"></div>
+      <div
+        class="hero-media"
+        aria-hidden="true"
+      ></div>
+
       <div class="hero-overlay"></div>
 
       <div class="hero-content reveal">
@@ -205,10 +280,12 @@
         />
 
         <p class="eyebrow">
+
           CIENCIA <i>•</i>
           HISTORIA <i>•</i>
           INGENIERÍA <i>•</i>
           NATURALEZA
+
         </p>
 
         <h1>
@@ -223,9 +300,11 @@
         <div class="hero-rule"></div>
 
         <p class="hero-copy">
+
           Divulgación científica cinematográfica en español.
           Fenómenos extremos, accidentes científicos,
           naturaleza letal y misterios reales del planeta.
+
         </p>
 
         <div class="actions">
@@ -234,14 +313,16 @@
             class="btn primary"
             href="#historias"
           >
-            Explorar historias <span>›</span>
+            Explorar historias
+            <span>›</span>
           </a>
 
           <a
             class="btn ghost"
             href="#colaboraciones"
           >
-            Colaborar con DATÓMICO <span>›</span>
+            Colaborar con DATÓMICO
+            <span>›</span>
           </a>
 
         </div>
@@ -268,24 +349,45 @@
     >
 
       <div>
-        <strong>45K+</strong>
-        <span>seguidores en Facebook</span>
+
+        <strong>
+          45K+
+        </strong>
+
+        <span>
+          seguidores en Facebook
+        </span>
+
       </div>
 
       <div>
-        <strong>4</strong>
-        <span>series editoriales</span>
+
+        <strong>
+          4
+        </strong>
+
+        <span>
+          series editoriales
+        </span>
+
       </div>
 
       <div>
-        <strong>100%</strong>
-        <span>historias basadas en hechos reales</span>
+
+        <strong>
+          100%
+        </strong>
+
+        <span>
+          historias basadas en hechos reales
+        </span>
+
       </div>
 
     </section>
 
     <!-- =====================================================
-         MANIFIESTO
+         QUÉ ES DATÓMICO
     ====================================================== -->
 
     <section
@@ -300,9 +402,11 @@
       <div class="manifesto-grid">
 
         <div>
+
           <h2>
             Ciencia sin perder el asombro.
           </h2>
+
         </div>
 
         <div class="body-copy">
@@ -358,6 +462,8 @@
 
       <div class="series-grid">
 
+        <!-- CIENCIA EXTREMA -->
+
         <article class="series-card accent-rad">
 
           <div class="series-icon">
@@ -374,6 +480,8 @@
           </p>
 
         </article>
+
+        <!-- MISTERIOS DEL PLANETA -->
 
         <article class="series-card accent-earth">
 
@@ -392,6 +500,8 @@
 
         </article>
 
+        <!-- MISTERIOS DE LA CIENCIA -->
+
         <article class="series-card accent-lab">
 
           <div class="series-icon">
@@ -409,6 +519,8 @@
 
         </article>
 
+        <!-- NATURALEZA LETAL -->
+
         <article class="series-card accent-nature">
 
           <div class="series-icon">
@@ -420,8 +532,8 @@
           </h3>
 
           <p>
-            Animales, plantas, hongos, parásitos y venenos
-            con mecanismos sorprendentes.
+            Animales, plantas, hongos, parásitos
+            y venenos con mecanismos sorprendentes.
           </p>
 
         </article>
@@ -431,7 +543,7 @@
     </section>
 
     <!-- =====================================================
-         HISTORIAS
+         HISTORIAS DESTACADAS
     ====================================================== -->
 
     <section
@@ -454,13 +566,15 @@
         </div>
 
         <p>
-          Próximamente cada episodio tendrá su propio expediente
-          con contexto, fuentes y datos ampliados.
+          Próximamente cada episodio tendrá su propio
+          expediente con contexto, fuentes y datos ampliados.
         </p>
 
       </div>
 
       <div class="story-grid">
+
+        <!-- SHANAY-TIMPISHKA -->
 
         <article class="story-card">
 
@@ -483,6 +597,8 @@
 
         </article>
 
+        <!-- BYFORD DOLPHIN -->
+
         <article class="story-card">
 
           <span class="tag">
@@ -503,6 +619,8 @@
           </span>
 
         </article>
+
+        <!-- PATA DE ELEFANTE -->
 
         <article class="story-card">
 
@@ -525,6 +643,8 @@
           </span>
 
         </article>
+
+        <!-- GOIÂNIA -->
 
         <article class="story-card">
 
@@ -552,7 +672,7 @@
     </section>
 
     <!-- =====================================================
-         CRITERIO
+         NUESTRO CRITERIO
     ====================================================== -->
 
     <section class="section standards">
@@ -570,32 +690,53 @@
         <div class="standards-grid">
 
           <div>
-            <strong>01</strong>
+
+            <strong>
+              01
+            </strong>
+
             <span>
               Hechos reales y verificables
             </span>
+
           </div>
 
           <div>
-            <strong>02</strong>
+
+            <strong>
+              02
+            </strong>
+
             <span>
               Explicaciones comprensibles
             </span>
+
           </div>
 
           <div>
-            <strong>03</strong>
+
+            <strong>
+              03
+            </strong>
+
             <span>
-              Recreaciones visuales al servicio de la historia
+              Recreaciones visuales al servicio
+              de la historia
             </span>
+
           </div>
 
           <div>
-            <strong>04</strong>
+
+            <strong>
+              04
+            </strong>
+
             <span>
               Sin conspiraciones ni ficción presentada
               como realidad
             </span>
+
           </div>
 
         </div>
@@ -628,8 +769,8 @@
 
           <p>
             Buscamos acceso a instalaciones, especialistas,
-            investigaciones, expediciones, tecnología y
-            fenómenos reales que merecen ser explicados.
+            investigaciones, expediciones, tecnología
+            y fenómenos reales que merecen ser explicados.
           </p>
 
         </div>
@@ -730,7 +871,12 @@
 
   </footer>
 
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
   <script src="script.js"></script>
 
 </body>
+
 </html>
