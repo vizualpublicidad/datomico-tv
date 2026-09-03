@@ -2068,3 +2068,12 @@ footer small{
   }
 
 }
+.nav-lab {
+  color: #ffc928;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.nav-lab:hover {
+  color: #ffe16a;
+}
