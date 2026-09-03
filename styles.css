@@ -935,43 +935,137 @@ h1{
    HISTORIAS
 ===================================================== */
 
+/* =====================================================
+   HISTORIAS
+===================================================== */
+
 .stories{
   padding-top:70px;
 }
 
 .story-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
-  gap:14px;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
 .story-card{
-  border:
-    1px solid var(--line);
-
-  padding:34px;
-
-  background:#101010;
-
-  min-height:250px;
-
   display:flex;
-
   flex-direction:column;
 
+  min-width:0;
+
+  background:#101010;
+  border:1px solid var(--line);
+
+  overflow:hidden;
+
   transition:
-    border-color .3s ease,
-    transform .3s ease;
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
 }
 
 .story-card:hover{
-  border-color:#3b3b3b;
+  transform:translateY(-5px);
 
-  transform:
-    translateY(-3px);
+  border-color:rgba(255,201,40,.34);
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.28);
+}
+
+
+/* IMAGEN */
+
+.story-image{
+  position:relative;
+
+  width:100%;
+  aspect-ratio:16 / 9;
+
+  overflow:hidden;
+
+  background:#080808;
+}
+
+.story-image::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.04) 45%,
+      rgba(0,0,0,.44) 100%
+    );
+
+  pointer-events:none;
+}
+
+.story-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+    transform .7s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.story-card:hover .story-image img{
+  transform:scale(1.045);
+
+  filter:
+    contrast(1.04)
+    brightness(1.04);
+}
+
+
+/* RECREACIÓN VISUAL */
+
+.story-recreation{
+  position:absolute;
+
+  z-index:2;
+
+  left:18px;
+  bottom:16px;
+
+  padding:5px 8px;
+
+  border:
+    1px solid rgba(255,255,255,.15);
+
+  background:
+    rgba(5,5,5,.68);
+
+  backdrop-filter:
+    blur(8px);
+
+  color:
+    rgba(255,255,255,.58);
+
+  font-size:.54rem;
+
+  font-weight:750;
+
+  letter-spacing:.14em;
+}
+
+
+/* CONTENIDO */
+
+.story-content{
+  min-height:250px;
+
+  padding:30px 32px 28px;
+
+  display:flex;
+  flex-direction:column;
 }
 
 .tag{
@@ -985,30 +1079,101 @@ h1{
 }
 
 .story-card h3{
-  font-size:2rem;
+  font-size:clamp(1.65rem,2.2vw,2rem);
+
+  line-height:1.15;
 
   margin:
     .8rem
     0
-    .7rem;
+    .65rem;
 }
 
 .story-card p{
   color:#bcb9b0;
 
   max-width:540px;
+
+  margin:
+    0
+    0
+    28px;
 }
 
-.story-status{
+
+/* CTA */
+
+.story-link{
   margin-top:auto;
 
-  color:#6f6e68;
+  display:flex;
 
-  font-size:.8rem;
+  align-items:center;
 
-  text-transform:uppercase;
+  gap:10px;
 
-  letter-spacing:.1em;
+  color:#77746c;
+
+  font-size:.68rem;
+
+  font-weight:800;
+
+  letter-spacing:.14em;
+
+  transition:
+    color .25s ease;
+}
+
+.story-link b{
+  color:var(--gold2);
+
+  font-size:1rem;
+
+  font-weight:500;
+
+  transition:
+    transform .25s ease;
+}
+
+.story-card:hover .story-link{
+  color:#d7d3c9;
+}
+
+.story-card:hover .story-link b{
+  transform:translateX(5px);
+}
+
+
+/* =====================================================
+   HISTORIAS — MOBILE
+===================================================== */
+
+@media(max-width:620px){
+
+  .story-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .story-content{
+    min-height:220px;
+
+    padding:
+      24px
+      22px;
+  }
+
+  .story-card h3{
+    font-size:1.65rem;
+  }
+
+  .story-recreation{
+    left:12px;
+    bottom:12px;
+
+    font-size:.5rem;
+  }
+
 }
 
 
