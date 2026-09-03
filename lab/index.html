@@ -435,7 +435,7 @@
       const o=ctx.createOscillator(),g=ctx.createGain();
       o.type=type;
       o.frequency.value=f;
-      g.gain.setValueAtTime(gain,ctx.currentTime);
+      g.gain.setValueAtTime(Math.min(gain * 2.2, 0.12), ctx.currentTime);
       g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+d);
       o.connect(g);
       g.connect(ctx.destination);
