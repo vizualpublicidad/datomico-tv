@@ -1248,49 +1248,353 @@ h1{
   display:grid;
 
   grid-template-columns:
-    1.4fr
-    .8fr;
+    minmax(0,1.45fr)
+    minmax(300px,.65fr);
 
-  gap:60px;
+  gap:70px;
 
-  border:
-    1px solid #4b3e16;
+  border:1px solid #4b3e16;
 
   background:
-
     radial-gradient(
-      circle at 80% 10%,
+      circle at 82% 8%,
       rgba(255,196,0,.12),
-      transparent 33%
+      transparent 32%
     ),
+    linear-gradient(
+      135deg,
+      #11100c,
+      #0c0c0b 62%
+    );
 
-    #10100f;
+  padding:64px;
 
-  padding:58px;
+  position:relative;
+
+  overflow:hidden;
 }
 
-.collab-card p{
-  color:#bab7ae;
+.collab-card::before{
+  content:"";
 
-  font-size:1.03rem;
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:150px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold2),
+      transparent
+    );
 }
 
-.collab-actions{
-  display:flex;
 
-  flex-direction:column;
+/* =====================================================
+   COLUMNA PRINCIPAL
+===================================================== */
 
-  justify-content:center;
+.collab-main h2{
+  max-width:760px;
 
-  align-items:flex-start;
+  font-size:
+    clamp(
+      2.7rem,
+      5vw,
+      5rem
+    );
 
-  gap:18px;
+  line-height:.98;
+
+  letter-spacing:-.052em;
+
+  margin:
+    .7rem
+    0
+    1.5rem;
 }
 
-.collab-actions span{
-  color:#85837d;
+.collab-intro{
+  max-width:700px;
 
-  font-size:.8rem;
+  color:#bbb8b0;
+
+  font-size:1.02rem;
+
+  margin:
+    0
+    0
+    42px;
+}
+
+
+/* =====================================================
+   TIPOS DE COLABORACIÓN
+===================================================== */
+
+.collab-categories{
+  display:grid;
+
+  gap:0;
+
+  border-top:
+    1px solid rgba(255,255,255,.10);
+}
+
+.collab-category{
+  display:grid;
+
+  grid-template-columns:
+    52px
+    1fr;
+
+  gap:20px;
+
+  align-items:start;
+
+  padding:
+    22px
+    0;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+.collab-number{
+  color:var(--gold2);
+
+  font-size:.7rem;
+
+  font-weight:850;
+
+  letter-spacing:.14em;
+
+  padding-top:3px;
+}
+
+.collab-category strong{
+  display:block;
+
+  color:#f1eee6;
+
+  font-size:.75rem;
+
+  font-weight:850;
+
+  letter-spacing:.14em;
+
+  margin-bottom:5px;
+}
+
+.collab-category p{
+  margin:0;
+
+  color:#8d8a83;
+
+  font-size:.87rem;
+
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   PANEL DE CONTACTO
+===================================================== */
+
+.collab-contact{
+  align-self:center;
+
+  border:
+    1px solid rgba(255,201,40,.18);
+
+  background:
+    rgba(5,5,5,.46);
+
+  padding:
+    34px;
+
+  position:relative;
+}
+
+.collab-contact::before{
+  content:"";
+
+  position:absolute;
+
+  left:-1px;
+  top:-1px;
+
+  width:55px;
+  height:1px;
+
+  background:var(--gold2);
+}
+
+.collab-contact-kicker{
+  display:block;
+
+  color:var(--gold2);
+
+  font-size:.63rem;
+
+  font-weight:850;
+
+  letter-spacing:.14em;
+
+  margin-bottom:18px;
+}
+
+.collab-contact h3{
+  font-size:
+    clamp(
+      2rem,
+      3vw,
+      2.8rem
+    );
+
+  line-height:1;
+
+  letter-spacing:-.04em;
+
+  margin:
+    0
+    0
+    14px;
+}
+
+.collab-contact p{
+  color:#9d9a93;
+
+  font-size:.9rem;
+
+  margin:
+    0
+    0
+    28px;
+}
+
+.collab-button{
+  width:100%;
+
+  justify-content:space-between;
+
+  padding:
+    0
+    20px;
+
+  font-size:.78rem;
+
+  letter-spacing:.04em;
+}
+
+.collab-email{
+  display:inline-block;
+
+  margin-top:22px;
+
+  color:#d3d0c8;
+
+  font-size:.84rem;
+
+  transition:
+    color .2s ease;
+}
+
+.collab-email:hover{
+  color:var(--gold2);
+}
+
+.collab-contact small{
+  display:block;
+
+  margin-top:8px;
+
+  color:#64625d;
+
+  font-size:.68rem;
+}
+
+
+/* =====================================================
+   COLABORACIONES — TABLET
+===================================================== */
+
+@media(max-width:900px){
+
+  .collab-card{
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+    padding:
+      46px
+      38px;
+  }
+
+  .collab-contact{
+    max-width:520px;
+  }
+
+}
+
+
+/* =====================================================
+   COLABORACIONES — MOBILE
+===================================================== */
+
+@media(max-width:620px){
+
+  .collab-card{
+    padding:
+      34px
+      22px;
+
+    gap:36px;
+  }
+
+  .collab-main h2{
+    font-size:
+      clamp(
+        2.4rem,
+        11vw,
+        3.4rem
+      );
+  }
+
+  .collab-intro{
+    font-size:.94rem;
+
+    margin-bottom:30px;
+  }
+
+  .collab-category{
+    grid-template-columns:
+      40px
+      1fr;
+
+    gap:12px;
+
+    padding:
+      19px
+      0;
+  }
+
+  .collab-contact{
+    padding:
+      26px
+      22px;
+  }
+
+  .collab-button{
+    min-height:52px;
+
+    font-size:.72rem;
+  }
+
 }
 
 
