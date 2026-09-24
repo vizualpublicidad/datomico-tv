@@ -164,7 +164,7 @@ nav a:hover{
   inset:0;
 
   background:
-    url('assets/hero-datomico-v4.jpg')
+    url('assets/hero-datomico-v4.webp')
     center /
     cover
     no-repeat;
@@ -1751,7 +1751,7 @@ footer small{
 ===================================================== */
 
 .reveal{
-  opacity:0;
+  opacity:1;
 
   transform:
     translateY(16px);
@@ -2334,4 +2334,70 @@ footer small{
     min-height: 210px;
   }
 
+}
+
+/* Refinamientos de experiencia: identidad V4 conservada. */
+html{scroll-padding-top:100px;color-scheme:dark}
+:where(a,button,summary):focus-visible{outline:3px solid var(--gold2);outline-offset:5px}
+.skip-link{position:fixed;left:16px;top:12px;z-index:100;padding:12px 18px;background:var(--gold2);color:#080808;font-weight:800;transform:translateY(-180%)}
+.skip-link:focus{transform:none}
+.mobile-menu{display:none}
+.hero{height:auto;min-height:min(900px,100svh);padding:108px 0 64px;overflow:visible}
+.hero-media,.hero-overlay{overflow:hidden;transform:none}
+.hero-content{padding-top:0}
+.hero-logo{width:clamp(104px,19vh,168px);height:clamp(104px,19vh,168px);margin-bottom:14px}
+h1{font-size:clamp(3rem,6vw,5.3rem)}
+.actions{margin-top:24px}
+.scroll-cue{bottom:12px;line-height:44px;min-width:44px;text-align:center;animation:none}
+.section{padding-top:80px;padding-bottom:80px}
+.stories,.lab-teaser,.standards,.collab{padding-top:48px}
+.metric-main small{color:#aaa79f;font-size:.68rem}
+.story-link{color:#bcb9b0;font-size:.75rem}
+.story-recreation{color:#e3e0d8;font-size:.65rem;background:rgba(5,5,5,.88)}
+.collab-contact small,footer small,.lab-teaser-status{color:#aaa79f}
+.social-icons a{width:44px;height:44px}
+.reveal{transform:none}
+.reveal.visible{opacity:1;transform:none}
+.site-header{padding-left:max(24px,env(safe-area-inset-left),calc((100vw - var(--max))/2));padding-right:max(24px,env(safe-area-inset-right),calc((100vw - var(--max))/2))}
+footer{padding-bottom:max(40px,env(safe-area-inset-bottom))}
+@media(max-width:900px){
+  .desktop-nav{display:none}
+  .mobile-menu{display:block}
+  .mobile-menu summary{min-height:44px;display:flex;align-items:center;gap:14px;cursor:pointer;padding:8px 14px;border:1px solid #6b5516;border-radius:6px;color:var(--gold2);list-style:none}
+  .mobile-menu summary::-webkit-details-marker{display:none}
+  .mobile-menu nav{position:absolute;top:100%;left:0;right:0;display:flex;align-items:stretch;flex-direction:column;gap:0;padding:12px max(24px,env(safe-area-inset-right));background:#10100e;border-bottom:1px solid #6b5516;box-shadow:0 20px 40px #0008}
+  .mobile-menu nav a:not(.nav-cta){display:flex;align-items:center;min-height:48px;padding:8px 12px}
+  .metrics{grid-template-columns:1fr 1fr}
+  .metric-main{grid-column:1/-1}
+  .metric-item:nth-child(2){border-bottom:0}
+}
+@media(max-width:620px){
+  html{scroll-padding-top:84px}
+  .site-header{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+  .brand span{display:inline;font-size:.86rem}
+  .hero{min-height:100svh;height:auto;padding:92px 0 60px}
+  .hero-media{background-image:url('assets/hero-datomico-mobile.webp')}
+  .hero-content{padding-top:0}
+  .hero-logo{width:96px;height:96px;margin-bottom:12px}
+  h1{font-size:clamp(2.4rem,11.6vw,3.7rem);line-height:1.02}
+  .hero-line{font-size:clamp(1.5rem,6.5vw,1.8rem);line-height:1.25;margin-bottom:18px}
+  .hero-copy{font-size:.95rem;line-height:1.5}
+  .actions{margin-top:22px;gap:10px}
+  .actions .btn{width:min(100%,300px);min-height:48px}
+  .section{padding:56px max(18px,env(safe-area-inset-left))}
+  .series-card{min-height:190px}
+  .series-card h3{margin-top:20px}
+  .metric-item{padding:18px 0}
+  .metric-main small{font-size:.65rem;letter-spacing:.05em}
+  .story-recreation{font-size:.62rem}
+  .lab-teaser-visual{min-height:170px}
+  .lab-rad{width:100px}
+  .collab-contact{min-width:0;padding:24px 16px}
+  .collab-email{overflow-wrap:anywhere}
+  .collab-button{white-space:normal;gap:8px;padding:10px 12px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal.is-pending{opacity:1;transform:none}
 }

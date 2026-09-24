@@ -7,13 +7,13 @@
   <meta name="description" content="DATÓMICO LAB — Zona Cero. Supera cinco zonas de contaminación, localiza las fuentes ocultas y consigue tu DATÓMICO Score.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#080808">
-  <link rel="canonical" href="https://datomicotv.com/lab/">
-  <link rel="icon" href="../assets/datomico-logo.png">
+  <link rel="canonical" href="https://datomicotv.com/lab">
+  <link rel="icon" href="../assets/favicon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DATÓMICO">
   <meta property="og:locale" content="es_MX">
-  <meta property="og:url" content="https://datomicotv.com/lab/">
+  <meta property="og:url" content="https://datomicotv.com/lab">
   <meta property="og:title" content="DATÓMICO LAB — Zona Cero">
   <meta property="og:description" content="¿Hasta dónde puedes llegar? Supera cinco niveles, consigue tu DATÓMICO Score y reta a la comunidad.">
   <meta property="og:image" content="https://datomicotv.com/assets/og-datomico.jpg">
@@ -187,6 +187,16 @@
     #dz102 .share-fallback{display:none;max-width:570px;margin:14px auto 0;padding:12px;border:1px solid #4a4437;background:#0a0a08;text-align:left}#dz102 .share-fallback.show{display:block}#dz102 .share-fallback textarea{width:100%;min-height:92px;resize:none;padding:10px;border:1px solid #3b382f;background:#060606;color:#d5d1c8;font-size:.71rem;line-height:1.45}
     #dz102 .overlay{display:none;position:absolute;z-index:60;left:12px;right:12px;top:70px;bottom:12px;background:rgba(2,2,2,.92);border:1px solid #655118;place-items:center;padding:18px}#dz102 .overlay.show{display:grid}#dz102 .modal{width:min(100%,440px);padding:15px;border:1px solid #403a2e;background:linear-gradient(145deg,#11100c,#070706);position:relative}#dz102 .mh{padding:3px 44px 12px 3px;text-align:left}#dz102 .mh strong{display:block;font-size:.8rem;letter-spacing:.1em}#dz102 .mh span{color:#7c786f;font-size:.61rem}#dz102 .close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:1px solid #464239;background:#0b0b09;color:#ccc7be;cursor:pointer}#dz102 .pimg{display:block;width:min(100%,320px);height:auto;margin:0 auto;border:1px solid #5b4918}#dz102 .ma{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}#dz102 canvas{display:none}
     @media(max-width:720px){#dz102 .top{grid-template-columns:1fr auto}#dz102 .proto{display:none}#dz102 .hud{grid-template-columns:1fr 1fr}#dz102 .hb:nth-child(even){border-right:0}#dz102 .hb:last-child{grid-column:1/-1}#dz102 .layout{grid-template-columns:1fr}#dz102 .side{border-left:0;border-top:1px solid #302c22}#dz102 .bz{padding:7px}#dz102 .frame{padding:8px}#dz102 .lv span{display:none}#dz102 .cell{font-size:clamp(.78rem,4.3vw,1.08rem);font-weight:950}#dz102 .cell.flagged{font-size:clamp(1.15rem,5.5vw,1.45rem);text-shadow:0 0 9px rgba(255,201,40,.35)}#dz102 .cell svg{width:66%;height:66%}#dz102 .overlay{top:64px;padding:10px}#dz102 .pimg{width:min(100%,270px)}#dz102 .ra button{height:50px;padding:0 18px}}
+  /* Readability and safe areas; approved game layout and rules preserved. */
+    :where(a,button,textarea):focus-visible{outline:3px solid #ffc928;outline-offset:3px}
+    body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+    .site-back{min-height:44px;display:flex;align-items:center;font-size:.7rem;color:#bcb9b0}
+    .disclaimer,.site-footer{color:#aaa69d;font-size:.78rem}
+    .site-footer{padding-bottom:max(36px,env(safe-area-inset-bottom))}
+    #dz102 .label,#dz102 .lv span,#dz102 .proto,#dz102 .lh span,#dz102 .music,#dz102 .tiny,#dz102 .stat span,#dz102 .help,#dz102 .mh span{color:#aaa69d}
+    #dz102 .audio,#dz102 .mode,#dz102 .close{min-height:44px}
+    #dz102 .close{width:44px}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
   </style>
 
   <script type="application/ld+json">
@@ -194,7 +204,7 @@
     "@context":"https://schema.org",
     "@type":"VideoGame",
     "name":"DATÓMICO LAB — Zona Cero",
-    "url":"https://datomicotv.com/lab/",
+    "url":"https://datomicotv.com/lab",
     "description":"Juego web de lógica de DATÓMICO con cinco niveles progresivos.",
     "applicationCategory":"Game",
     "operatingSystem":"Web",
@@ -210,7 +220,7 @@
 <body>
   <header class="site-header">
     <a class="site-brand" href="/" aria-label="DATÓMICO">
-      <img src="../assets/datomico-logo.png" alt="DATÓMICO">
+      <img src="../assets/datomico-logo.webp" width="400" height="400" alt="DATÓMICO">
       <div class="site-brand-copy">
         <strong>DATÓMICO</strong>
         <span>LAB</span>
@@ -276,7 +286,7 @@
               </div>
 
               <div class="frame">
-                <div class="board" id="board" role="grid" aria-label="Tablero Zona Cero"></div>
+                <div class="board" id="board" role="group" aria-label="Tablero Zona Cero"></div>
 
                 <div class="review" id="review">
                   <strong id="rtitle"></strong>
@@ -492,13 +502,14 @@
     }
 
     function render(){
+      const focusedIndex = Array.from(board.children).indexOf(document.activeElement);
       board.innerHTML='';
       cells.forEach((c,i)=>{
         const b=document.createElement('button');
         b.type='button';
         b.className='cell';
-        b.setAttribute('role','gridcell');
-        b.setAttribute('aria-label','Zona '+(i+1));
+        const state = c.rev ? (c.mine ? (c.sec ? 'fuente asegurada' : 'fuente expuesta') : c.num + ' fuentes adyacentes') : c.flag ? 'marcada' : 'sin explorar';
+        b.setAttribute('aria-label','Zona '+(i+1)+': '+state);
 
         if(c.rev){
           b.classList.add('revealed');
@@ -525,6 +536,7 @@
 
         board.appendChild(b);
       });
+      if (focusedIndex >= 0 && !resolved) board.children[focusedIndex]?.focus({preventScroll:true});
     }
 
     function hud(){
@@ -916,7 +928,7 @@
 
     async function tryShare(){
       const text=shareText();
-      const url='https://datomicotv.com/lab/';
+      const url='https://datomicotv.com/lab';
 
       if(navigator.share){
         try{

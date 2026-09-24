@@ -8,7 +8,7 @@
   ====================================================== -->
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
 
   <!-- =====================================================
@@ -187,14 +187,18 @@
 
   <link
     rel="icon"
-    href="assets/datomico-logo.png"
+    href="assets/favicon.png"
   />
 
   <link
     rel="preload"
     as="image"
-    href="assets/hero-datomico-v4.jpg"
+    href="assets/hero-datomico-v4.webp"
+    media="(min-width: 621px)"
+    fetchpriority="high"
   />
+
+  <link rel="preload" as="image" href="assets/hero-datomico-mobile.webp" media="(max-width: 620px)" fetchpriority="high" />
 
   <link
     rel="stylesheet"
@@ -205,6 +209,7 @@
 
 
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 
   <!-- =====================================================
@@ -223,7 +228,8 @@
     >
 
       <img
-        src="assets/datomico-logo.png"
+        src="assets/datomico-logo.webp"
+        width="400" height="400"
         alt="Logo DATÓMICO"
       />
 
@@ -234,7 +240,7 @@
     </a>
 
 
-    <nav aria-label="Principal">
+    <nav class="desktop-nav" aria-label="Principal">
 
   <a href="#series">
     Series
@@ -246,7 +252,7 @@
 
   <a
     class="nav-lab"
-    href="/lab/"
+    href="/lab"
   >
     LAB
   </a>
@@ -263,11 +269,21 @@
   </a>
 
 </nav>
+    <details class="mobile-menu">
+      <summary>Menú <span aria-hidden="true">☰</span></summary>
+      <nav aria-label="Principal móvil">
+        <a href="#historias">Historias</a>
+        <a href="#series">Series</a>
+        <a class="nav-lab" href="/lab">DATÓMICO LAB</a>
+        <a href="#colaboraciones">Colaboraciones</a>
+        <a href="mailto:contacto@datomicotv.com">Contacto</a>
+      </nav>
+    </details>
 
   </header>
 
 
-  <main>
+  <main id="contenido">
 
 
     <!-- =====================================================
@@ -288,7 +304,8 @@
 
         <img
           class="hero-logo"
-          src="assets/datomico-logo.png"
+          src="assets/datomico-logo.webp"
+        width="400" height="400"
           alt="DATÓMICO"
         />
 
@@ -842,7 +859,7 @@
         </p>
 
         <span class="story-link">
-          VER EPISODIO <b>→</b>
+          VER EN FACEBOOK <b>→</b>
         </span>
 
       </div>
@@ -893,7 +910,7 @@
         </p>
 
         <span class="story-link">
-          VER EPISODIO <b>→</b>
+          VER EN FACEBOOK <b>→</b>
         </span>
 
       </div>
@@ -945,7 +962,7 @@
         </p>
 
         <span class="story-link">
-          VER EPISODIO <b>→</b>
+          VER EN FACEBOOK <b>→</b>
         </span>
 
       </div>
@@ -996,7 +1013,7 @@
         </p>
 
         <span class="story-link">
-          VER EPISODIO <b>→</b>
+          VER EN FACEBOOK <b>→</b>
         </span>
 
       </div>
@@ -1018,7 +1035,7 @@
 
   <a
     class="lab-teaser-card"
-    href="/lab/"
+    href="/lab"
     aria-label="Entrar a DATÓMICO LAB"
   >
 
@@ -1034,12 +1051,12 @@
       </h2>
 
       <p>
-        Supera cinco zonas, consigue tu DATÓMICO Score
-        y reta a la comunidad.
+        Zona Cero: un juego de lógica con cinco niveles. Localiza las fuentes
+        ocultas, consigue tu DATÓMICO Score y reta a la comunidad.
       </p>
 
       <span class="lab-teaser-cta">
-        ENTRAR AL LAB <b>→</b>
+        JUGAR ZONA CERO <b>→</b>
       </span>
 
     </div>
@@ -1313,7 +1330,8 @@
   <div class="footer-brand">
 
     <img
-      src="assets/datomico-logo.png"
+      src="assets/datomico-logo.webp"
+        width="400" height="400"
       alt="Logo DATÓMICO"
     />
 

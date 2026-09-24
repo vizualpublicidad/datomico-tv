@@ -13,34 +13,21 @@ if (yearElement) {
 // ANIMACIONES AL HACER SCROLL
 // =====================================================
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.12
-  }
-);
+// All editorial content is visible immediately, including without JavaScript.
 
-document
-  .querySelectorAll(
-    '.reveal, .series-card, .story-card, .standards-panel, .collab-card'
-  )
-  .forEach((el) => {
-
-    if (!el.classList.contains('reveal')) {
-      el.classList.add('reveal');
+const menu = document.querySelector('.mobile-menu');
+if (menu) {
+  menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { menu.open = false; }));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.open) {
+      menu.open = false;
+      menu.querySelector('summary').focus();
     }
-
-    observer.observe(el);
-
   });
-
+  document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target)) menu.open = false;
+  });
+}
 
 // =====================================================
 // GOOGLE ANALYTICS
@@ -80,3 +67,15 @@ document
     });
 
   });
+
+// Measure intent separately from email leads; do not count clicks as video views.
+document.querySelectorAll('.story-card, .lab-teaser-card, .nav-lab, .hero .primary').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'select_content', {
+      content_type: link.classList.contains('story-card') ? 'episode' : link.pathname === '/lab' ? 'lab' : 'stories',
+      item_id: link.getAttribute('href'),
+      content_source: link.closest('.site-header') ? 'header' : link.closest('.hero') ? 'hero' : 'section'
+    });
+  });
+});
